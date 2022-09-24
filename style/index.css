@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.portfolio-header {
+  overflow: hidden;
+  background-color: #100f0f;
+  padding: 20px 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.portfolio-header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.portfolio-header a.portfolio-header-name-logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.portfolio-header a:hover {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%; */
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.portfolio-header a.active {
+  color: white;
+}
