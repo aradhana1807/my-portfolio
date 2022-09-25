@@ -78,7 +78,6 @@
 }
 
 .portfolio-header a.active {
-  
   color: white;
 }
 
@@ -87,7 +86,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .portfolio-header__wrapper{
+  .portfolio-header__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,5 +95,4 @@
   .portfolio-header a {
     flex-direction: column;
   }
-  
 }
