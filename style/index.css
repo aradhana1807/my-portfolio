@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 .portfolio-header {
   overflow: hidden;
   background-color: #100f0f;
@@ -6,8 +6,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+.portfolio-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .portfolio-header a {
-  float: left;
   color: white;
   text-align: center;
   padding: 12px;
@@ -19,12 +25,44 @@
 .portfolio-header a.portfolio-header-name-logo {
   font-size: 25px;
   font-weight: bold;
+  letter-spacing: 5px;
 }
 
 .portfolio-header a:hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-header a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%; */
-  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  height: 2px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.portfolio-header a:hover:before,
+.portfolio-header a:focus:before,
+.portfolio-header a:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 @keyframes gradient {
@@ -40,5 +78,23 @@
 }
 
 .portfolio-header a.active {
+  
   color: white;
+}
+
+.portfolio-header-menu-list {
+  padding: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio-header__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-header a {
+    flex-direction: column;
+  }
+  
 }
